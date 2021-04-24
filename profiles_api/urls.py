@@ -7,8 +7,9 @@ from profiles_api import views
 router = DefaultRouter()
 router.register('hello-viewset',  # Url endpoint
                 views.HelloApiViewSet,
-                base_name='hello-viewset'  # use when retrieve()
+                base_name='hello-viewset'  # use when you want to override model name or not using model
                 )
+router.register('profile', views.UserProfileViewSet)
 
 urlpatterns = [
     path('hello-view/', views.HelloApiView.as_view()),
