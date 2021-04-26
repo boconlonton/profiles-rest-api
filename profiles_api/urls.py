@@ -10,6 +10,7 @@ router.register('hello-viewset',  # Url endpoint
                 base_name='hello-viewset'  # use when you want to override model name or not using model
                 )
 router.register('profile', views.UserProfileViewSet)
+router.register('feed', views.ProfileFeedItemApiViewSet)
 
 urlpatterns = [
     path('hello-view/', views.HelloApiView.as_view()),
